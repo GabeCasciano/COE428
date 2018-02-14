@@ -1,44 +1,56 @@
 //Gabriel Casciano, 500744076
 #include "mySort.h"
-#include <limits.h>
 #include "metrics.h"
+#include <stdio.h>
+#include <string.h>
 
-void merge(int array[], int first, int last, int middle){
-	int leftIndex =  last - first + 1;
-	int rightIndex = middle - last;
+void merge(int array[], int first, int middle, int last){
+    int left[middle];
+    int right[last - middle];
 
-	int leftArray[leftIndex + 1];
-	int rightArray[rightIndex + 1];
+    for(int z = 0; z < middle; z++) {
+        myCopy(&array[z], &left[z]);
+        array[z] = 0;
+    }
+    for(int z = middle; z < last; z++) {
+        myCopy(&array[z], &right[z]);
+        array[z] = 0;
+    }
 
-	for(int i = 0; i < leftIndex; i++)
-		myCopy(&array[first + i - 1], &leftArray[i]);
-	for(int i = 0; i < rightIndex; i++)
-		myCopy(&array[last + i], &rightArray[i]);
-	
-	leftArray[leftIndex + 1] = INT_MAX;
-	rightArray[rightIndex + 1] = INT_MAX;
+    int i, j, k;
 
-	int i=1, j=1;
-	
-	for(int k = first - 1; k < middle; k++){
-		if(myCompare(leftArray[i], rightArray[j]) <= 0){
-			myCopy(&leftArray[i], &array[k]);
-			i++;
-		}
-		else if(myCompare(array[k], rightArray[j]) == 0){
-			myCopy(&rightArray[j], &array[k]);
-			j++;
-		}
-	}
+    i = 0;
+    j = 0;
+    k = 0;
+
+    while(i < middle && j < last){
+        if(myCompare(left[i],right[j]) <= 0){
+            myCopy(&left[i], &array[k]);
+            i++;
+            k++;
+        }
+        else{
+            myCopy(&right[j], &array[k]);
+            j++;
+            k++;
+        }
+    }
+
+    for(int z = i; z < middle; z++) {
+        myCopy(&left[z], &array[k]);
+        k++;
+    }
+    for (int z = j; z < last - middle; z++){
+        myCopy(&right[z], &array[k]);
+        k++;
+    }
 }
 void mySort(int array[], unsigned int first, unsigned int last){
-	int doSort = 0;
-	for(int i = 0; i < last - 1; i++)
-		if(myCompare(array[i],array[i+1])>0){ doSort = 1; } 
-	if(first < last && doSort == 1){
-		int  middle = (first + last)/2;
-		mySort(array, first, middle);
-		mySort(array, middle + 1, last);
-		merge(array, first, last, middle);
-	}    
+	int middle = 0;
+    if(last - first <= 2){
+        middle  = (last + first) / 2;
+        mySort(array, first, middle);
+        mySort(array, middle, last);
+        merge(array, first, middle, last);
+    }
 }
