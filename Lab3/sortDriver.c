@@ -18,9 +18,9 @@ int main(int argc, char * argv[])
   }
 
   /* Read ints from stdin into an array */
-  for(array_size = 0; (scanf("%d", &a[array_size]) != EOF)
-        && (array_size < MAX_SIZE_N_TO_SORT);
-      array_size++)
+  for(array_size = 0; (scanf("%d", &a[array_size]) != EOF) 
+	&& (array_size < MAX_SIZE_N_TO_SORT);
+      	array_size++)
     ;
 
   /* sort the array */
