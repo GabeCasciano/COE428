@@ -1,6 +1,6 @@
 Ignore the CMake file, this is just so I can use a nicer IDE.
 
-The picture of the FSM is in the image titled "FSM_IMAGE.jpg"
+The picture of the FSM is in the image titled "FSM_IMAGE.jpggit s"
 
 Does not work, I am struggling to get rid od Segmentation Faults.
 This lab is also not complete and I plan on submitting it late,
