@@ -1,10 +1,10 @@
-A E G
-B C D
-C C H
-D A F
-E B D
-F G B
-G F C
-H E A
+A E G|0 4 6
+B C D|1 2 3
+C C H|2 2 7
+D A F|3 1 5
+E B D|4 2 3
+F G B|5 6 1
+G F C|6 4 2
+H E A|7 4 0
 
 Starting state is: H
