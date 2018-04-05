@@ -1,0 +1,1 @@
+/usr/bin/cc -g  -rdynamic CMakeFiles/src2.dir/part2Main.c.o CMakeFiles/src2.dir/intStack.c.o  -o src2 
