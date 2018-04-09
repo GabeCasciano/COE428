@@ -12,16 +12,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1ff0a152-57e6-4bc9-8e8e-e29e288dfd56" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.Makefile.swp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../src1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src1/part1Main.c" beforeDir="false" afterPath="$PROJECT_DIR$/../src1/part1Main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../src2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src2/cmake-build-debug/CMakeFiles/src2.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../src2/cmake-build-debug/CMakeFiles/src2.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src2/cmake-build-debug/CMakeFiles/src2.dir/intStack.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/../src2/cmake-build-debug/CMakeFiles/src2.dir/intStack.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src2/cmake-build-debug/CMakeFiles/src2.dir/part2Main.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/../src2/cmake-build-debug/CMakeFiles/src2.dir/part2Main.c.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src2/cmake-build-debug/src2" beforeDir="false" afterPath="$PROJECT_DIR$/../src2/cmake-build-debug/src2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src2/intStack.c" beforeDir="false" afterPath="$PROJECT_DIR$/../src2/intStack.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../src2/part2Main.c" beforeDir="false" afterPath="$PROJECT_DIR$/../src2/part2Main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/part3Main.c" beforeDir="false" afterPath="$PROJECT_DIR$/part3Main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stringHashTable.c" beforeDir="false" afterPath="$PROJECT_DIR$/stringHashTable.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stringStack.c" beforeDir="false" afterPath="$PROJECT_DIR$/stringStack.c" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -64,8 +59,8 @@
       <file leaf-file-name="stringStack.c" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/stringStack.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="74" column="17" selection-start-line="74" selection-start-column="17" selection-end-line="74" selection-end-column="17" />
+            <state relative-caret-position="1296">
+              <caret line="72" column="29" selection-start-line="72" selection-start-column="29" selection-end-line="72" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -155,16 +150,15 @@
       <updated>1522918823998</updated>
       <workItem from="1522918827269" duration="53000" />
       <workItem from="1522918895427" duration="4211000" />
-      <workItem from="1523259982161" duration="418000" />
+      <workItem from="1523259982161" duration="817000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4682000" />
+    <option name="totallyTimeSpent" value="5081000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="-11" width="1922" height="1092" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24986821" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -243,8 +237,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/stringStack.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="74" column="17" selection-start-line="74" selection-start-column="17" selection-end-line="74" selection-end-column="17" />
+        <state relative-caret-position="1296">
+          <caret line="72" column="29" selection-start-line="72" selection-start-column="29" selection-end-line="72" selection-end-column="29" />
         </state>
       </provider>
     </entry>

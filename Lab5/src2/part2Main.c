@@ -42,7 +42,7 @@ int main(int argc, char * argv[]) {
             }
         }
     }
-    if(isEmpty() > 0){
+    if(isEmpty() > -1){
         printf("NOT Valid");
         exit(1);
     }

@@ -72,6 +72,4 @@ void push(int thing2push) {
  * stack is empty; otherwise, it returns 0 (zero).
  *
  */
-int isEmpty() { return top; }
-int* getStack() { return stack; }
-int getTop() { return top; }
+int isEmpty() { return top-1; }
