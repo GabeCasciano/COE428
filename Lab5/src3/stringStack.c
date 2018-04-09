@@ -26,6 +26,9 @@
 //  RECOMMENDATION:
 //   Uncomment the following 2 lines and use these static globals!
 #include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
 static int top = 0;
 static char * stack[100];
 
@@ -38,12 +41,12 @@ static char * stack[100];
 
 char *  pop()
 {
-    char * temp;
+    char * hold;
     if(top != 0){
-        temp = stack[top];
-        stack[top] = NULL;
+        strcpy(hold, stack[top-1]);
+        free(stack[top-1]);
         top--;
-        return temp;
+        return hold;
     }
     fprintf(stderr, "The stack is empty");
     return NULL;
@@ -58,7 +61,8 @@ char *  pop()
 void push(char * thing2push)
 {
     if(top < 100) {
-        stack[top] = thing2push;
+        stack[top] = malloc(strlen(thing2push));
+        strcpy(stack[top], thing2push);
         top++;
     }
     else

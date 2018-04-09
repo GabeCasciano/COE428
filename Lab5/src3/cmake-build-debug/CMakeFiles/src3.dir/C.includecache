@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/gabe/COE428/Lab5/src3/part3Main.c
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+ctype.h
+-
+
+/home/gabe/COE428/Lab5/src3/stringHashTable.c
+string.h
+-
+stdlib.h
+-
+stdio.h
+-
+
+/home/gabe/COE428/Lab5/src3/stringStack.c
+stdio.h
+-
+string.h
+-
+stdlib.h
+-
+
