@@ -25,8 +25,9 @@
 //
 //  RECOMMENDATION:
 //   Uncomment the following 2 lines and use these static globals!
-//static int top = 0;
-//static char * stack[100];
+#include <stdio.h>
+static int top = 0;
+static char * stack[100];
 
 /**
  * pop() removes the top string on the stack and returns it.
@@ -37,7 +38,15 @@
 
 char *  pop()
 {
-  return (char *) 0;  //A dummy return statement
+    char * temp;
+    if(top != 0){
+        temp = stack[top];
+        stack[top] = NULL;
+        top--;
+        return temp;
+    }
+    fprintf(stderr, "The stack is empty");
+    return NULL;
 }
 
 /**
@@ -48,6 +57,12 @@ char *  pop()
  */
 void push(char * thing2push)
 {
+    if(top < 100) {
+        stack[top] = thing2push;
+        top++;
+    }
+    else
+        fprintf(stderr, "The stack is full");
 }
 
 /**
@@ -55,7 +70,4 @@ void push(char * thing2push)
  * stack is empty; otherwise, it returns 0 (zero).
  *
  */
-int isEmpty()
-{
-  return 0;  //A dummy return statement
-}
+int isEmpty(){ return top-1; }

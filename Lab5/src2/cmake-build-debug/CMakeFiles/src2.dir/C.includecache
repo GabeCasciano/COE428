@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/gabe/COE428/Lab5/src2/intStack.c
+stdio.h
+-
+
+/home/gabe/COE428/Lab5/src2/part2Main.c
+stdio.h
+-
+stdlib.h
+-
+ctype.h
+-
+

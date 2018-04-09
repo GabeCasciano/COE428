@@ -3,6 +3,7 @@
 #include <ctype.h>
 extern char *  pop();
 extern void push(char *);
+extern void isEmpty();
 
 int main(int argc, char * argv[])
 {
