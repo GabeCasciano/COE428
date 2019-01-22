@@ -8,7 +8,7 @@ extern int isEmpty();
 int main(int argc, char * argv[]) {
     int ch;
     int previous_char;
-    while ((ch = getchar()) != '\n<') {
+    while ((ch = getchar()) != '\n') {
         if(ch == '<'|| ch == '/')
             previous_char = ch;
         else if(isalpha(ch)){

@@ -1,10 +1,9 @@
 /**
  *  The functions in this module implement a Stack data structure
- *  of integers.  (Note that chars are also integers so this
- *  integer Stack can be used for chars as well.)
- *
+ *  of char pointers (aka "strings").
+ *  
  *  NOTE: the stack is implemented as a fixed size array (size = 100).
- *  Consequently, no more than 100 integers can be pushed onto
+ *  Consequently, no more than 100 strings can be pushed onto
  *  the Stack at any given time.
  */
 
@@ -27,29 +26,31 @@
 //  RECOMMENDATION:
 //   Uncomment the following 2 lines and use these static globals!
 #include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 
 static int top = 0;
-static int stack[100];
-
+static char * stack[100];
 
 /**
- * pop() removes the top integer on the stack and returns it.
+ * pop() removes the top string on the stack and returns it.
  *
  * If pop() is attempted on an empty stack, an error message
- * is printed to stderr and the value -1 (minus one) is returned.
+ * is printed to stderr and the value NULL ((char *) 0) is returned.
  */
 
-int pop() {
-    if(top == 0){
-        fprintf(stderr, "The stack is empty");
-        return -1;
-    }
-    else{
-        int temp = stack[top];
-        stack[top] = 0;
+char *  pop()
+{
+    char * hold;
+    if(top != 0){
+        hold = malloc(strlen(stack[top - 1]));
+        strcpy(hold, stack[top-1]);
+        free(stack[top-1]);
         top--;
-        return temp;
+        return hold;
     }
+    fprintf(stderr, "The stack is empty");
+    return NULL;
 }
 
 /**
@@ -58,10 +59,12 @@ int pop() {
  *  If there is no more space available on the Stack, an error
  *  message is printed to stderr.
  */
-void push(int thing2push) {
-    if(top < 100){
+void push(char * thing2push)
+{
+    if(top < 100) {
+        stack[top] = malloc(strlen(thing2push));
+        strcpy(stack[top], thing2push);
         top++;
-        stack[top] = thing2push;
     }
     else
         fprintf(stderr, "The stack is full");
@@ -72,4 +75,4 @@ void push(int thing2push) {
  * stack is empty; otherwise, it returns 0 (zero).
  *
  */
-int isEmpty() { return top-1; }
+int isEmpty(){ return top-1; }
